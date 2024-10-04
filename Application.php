@@ -1,9 +1,9 @@
 <?php
 
-namespace app\core;
+namespace jamiegumbrell\phpmvc;
 
-use app\core\db\Database;
-use app\core\db\DbModel;
+use jamiegumbrell\phpmvc\db\Database;
+use jamiegumbrell\phpmvc\db\DbModel;
 
 class Application {
 

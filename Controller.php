@@ -1,8 +1,8 @@
 <?php
 
-namespace app\core;
+namespace jamiegumbrell\phpmvc;
 
-use app\core\middlewares\BaseMiddleware;
+use jamiegumbrell\phpmvc\middlewares\BaseMiddleware;
 
 class Controller{
 

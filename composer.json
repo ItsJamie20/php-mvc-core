@@ -6,5 +6,10 @@
             "email": "jamie@gumbrell.net"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "jamiegumbrell\\phpmvc": "."
+        }
+    }
 }
