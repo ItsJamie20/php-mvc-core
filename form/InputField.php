@@ -24,9 +24,25 @@ class InputField extends BaseField{
         return $this;
     }
 
+    public function hidden()
+    {
+        $this->hidden = TRUE;
+        return $this;
+    }
+
     public function renderInput(): string
     {
         return sprintf('<input type="%s" name="%s" value="%s" class="form-control%s">',
+            $this->type,
+            $this->attribute, 
+            $this->model->{$this->attribute},
+            $this->model->hasError($this->attribute) ? ' is-invalid' : ''
+        );
+    }
+
+    public function renderHidden(): string
+    {
+        return sprintf('<input hidden type="%s" name="%s" value="%s" class="form-control%s">',
             $this->type,
             $this->attribute, 
             $this->model->{$this->attribute},

@@ -10,14 +10,19 @@ abstract class BaseField{
 
     public Model $model;
     public string $attribute;
+    public bool $hidden;
     
     public function __construct(Model $model, string $attribute){
         $this->model = $model;
         $this->attribute = $attribute;
+        $this->hidden = FALSE;
     }
 
     public function __toString()
     {
+        if($this->hidden){
+            return $this->renderHidden();
+        }
         return sprintf('
             <div class="form-group">
                 <label>%s</label>

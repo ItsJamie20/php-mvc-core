@@ -15,14 +15,16 @@ class Form {
         echo '</form>';
     }
 
-
     public function field(Model $model, $attribute){
         return new InputField($model, $attribute);
     }
 
-
     public function textField(Model $model, $attribute){
         return new TextAreaField($model, $attribute);
+    }
+
+    public function jsField(Model $model, $attribute, string $name, string $script){
+        return new JSField($model, $attribute, $name, $script);
     }
 
 }
